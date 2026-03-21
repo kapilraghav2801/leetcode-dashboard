@@ -32,7 +32,7 @@ async def search_youtube(question_title: str) -> list[dict]:
                                 "url": f"https://www.youtube.com/watch?v={vid_id}",
                                 "source": "YouTube",
                             })
-                        if len(results) >= 4:
+                        if len(results) >= 2:
                             break
                     break
     except Exception:
@@ -48,16 +48,6 @@ def get_leetcode_links(question_title: str, slug: str | None, leetcode_url: str 
         results.append({
             "title": f"LeetCode Problem: {question_title}",
             "url": base_url,
-            "source": "LeetCode",
-        })
-        results.append({
-            "title": f"Community Solutions: {question_title}",
-            "url": f"https://leetcode.com/problems/{slug}/solutions/",
-            "source": "LeetCode",
-        })
-        results.append({
-            "title": f"Editorial: {question_title}",
-            "url": f"https://leetcode.com/problems/{slug}/editorial/",
             "source": "LeetCode",
         })
     elif leetcode_url:
