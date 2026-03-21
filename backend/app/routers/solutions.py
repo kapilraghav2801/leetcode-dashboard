@@ -62,5 +62,5 @@ def upsert_my_solution(
 @router.get("/web", response_model=list[WebSolutionOut])
 async def get_web_solutions(question_id: str, db: Session = Depends(get_db)):
     q = get_question_or_404(question_id, db)
-    results = await fetch_web_solutions(q.title)
+    results = await fetch_web_solutions(q.title, q.slug, q.leetcode_url)
     return results
