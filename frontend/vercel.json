@@ -1,4 +1,3 @@
 {
-  "rewrites": [{ "source": "/leetcode/(.*)", "destination": "/index.html" }]
+  "rewrites": [{ "source": "/leetcode(.*)", "destination": "/index.html" }]
 }
-
