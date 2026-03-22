@@ -8,6 +8,11 @@ backend/.env
 # Node
 frontend/node_modules/
 frontend/dist/
+frontend/.vite/
+
+# Backups (local only, never push)
+backend_backup/
+frontend_backup/
 
 # Misc
 .DS_Store
